@@ -11,6 +11,8 @@ Examples of AQS queries:
 
 `kind:music date:past month`
 
+In general, all metadata that Windows is aware of for a given file type can be used in search. In practice this means that for using metadata of a file type one needs a component that implements the so called `IFilter` interface for that type. For instance for PDFs there is [PdfLib TET PDF IFilter](https://www.pdflib.com/products/tet-pdf-ifilter/overview/) (free for non-commercial use) that makes PDF file properties available for exploring and searching.
+
 # AQS Localization
 
 While the AQS examples use English search tokens (`author`, or `kind`) in English-localized Windows setups, Windows targeting other languages use localized versions of the tokens. For instance for Spanish langauge Windows, the tokens can be (`autores`, `carpeta`, etc.) Same with date specifications and so on.
