@@ -27,7 +27,7 @@ Querying Windows Search index is well supported by OS-provided SQL-type DB query
 
 Dealing with windows search AQS (abstract query syntax) is not that 100% easy. One can find in `nuget` package repositories a package called `tlbimp-Microsoft.Search.Interop` that is what's needed to eventually instantiate `GenerateSQLFromUserQuery` that crucially transforms a user-given query in AQS into a formal SQL query to run against Windows Search indexer (an step that must be already happening in File Explorer plugin). 
 
-So basically File Explorer plugin could support AQS syntax simply by front-running the user query, making in pass through the `GenerateSQLFromUserQuery` and use the result as the windows-search DB query crunching that sould be already in place.
+So basically File Explorer plugin could support AQS syntax simply by front-running the user query, passing it to `GenerateSQLFromUserQuery` and using the result as the windows-search DB query crunching that sould be already in place.
 
 The `tlbimp-Microsoft.Search.Interop` is warned to be old.
 
